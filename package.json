@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node --stack-size=10000 ./bin/cluster",
     "stop": "kill -2 $(cat tmp/cluster.pid)",
-    "test": "node ./node_modules/jasmine/bin/jasmine.js"
+    "test": "node ./node_modules/jasmine/bin/jasmine.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "express": "~4.2.0",
@@ -21,9 +23,11 @@
     "mongodb": "2.0.45",
     "mongoose": "4.1.10",
     "markdown-js": "0.0.3",
-    "qr-image": "~2.0.0"
+    "qr-image": "~2.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "jasmine": "~2.1.0"
-  }
+  },
+  "snyk": true
 }
