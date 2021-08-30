@@ -1,0 +1,13 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:mime:20170907':
+    - chaincoin-node-api > express > send > mime:
+        patched: '2021-08-30T22:36:22.627Z'
+    - chaincoin-node-api > express > connect > send > mime:
+        patched: '2021-08-30T22:36:22.627Z'
+  'npm:qs:20140806-1':
+    - chaincoin-node-api > express > connect > qs:
+        patched: '2021-08-30T22:36:22.627Z'
